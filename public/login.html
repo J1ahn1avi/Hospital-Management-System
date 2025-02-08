@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/icon.ico">
+    <title>Login page</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #0d1f2a;
+        }
+        .login-container{
+            background-color:white;
+            padding: 30px;
+            border-radius:10px;
+            text-align: center;
+            width: 350px;
+        }
+        .login-container h2 {
+            margin-bottom: 15px;
+        }
+        .login-container p {
+            color: rgb(178, 179, 216);
+            font-size: 20px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .input-group{
+            text-align:left;
+            margin-bottom: 15px;
+            color: #0f256d;
+        }
+        .input-group input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #18162f ;
+            border-radius: 7px;
+        }
+        .login-btn{
+            width: 30%;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 4px;
+            color: whitesmoke;
+            background-color: rgb(70, 80, 130);
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+        }
+        .login-btn:hover{
+            background-color:rgb(22, 22, 81);
+        }
+        .signup-link {
+            margin-top: 10px;
+            font-size: 17px;
+        }
+        .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Welcome Back</h2>
+        <p>Login with your details.</p>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="signup-link">
+            Don't have an account? <a href="#">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>

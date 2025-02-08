@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/images/icon.ico" />
+    <title>Home</title>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+            display: flex;
+            padding: 0px;
+            flex-direction:column;
+        }
+        .main-content{
+            flex: 1;
+            /* background: rgba(134, 139, 147, 0.5); */
+            min-height: 89vh;
+            diaplay:flex;
+            justify-content: centre;
+            align-items: center;
+        }
+        *{ 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial',sans-serif;
+        } 
+        .hero{
+            background-image: url("./assets/images/doctors.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* position: relative; */
+            text-align: center;
+            color: white;
+            
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 89%;
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: 1;
+        }
+        .overlay{ /*for making the background image lighter*/
+            position:relative;
+            z-index: 2;
+            color:white;
+            text-align:center;
+            padding: 40px;
+            /* border-radius: 10px; */
+            /* max-width:600px; */
+        }
+        .overlay h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .overlay p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px ;
+            position: fixed;
+            width: 100%;
+            top:0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10;
+            flex-wrap: nowrap;
+        }
+        nav ul{
+            list-style: none;
+            display: flex; /*to align items one after the other*/
+            margin-right: 20px;
+            flex-wrap: nowrap;
+        }
+        nav ul li{
+            margin:0 10px;
+        }
+        nav ul li a{
+            color:white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+        nav ul li a:hover {
+            color: #28a745;
+        }
+        .logo{
+            color: white;
+            /* font: 22px; */
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .cta-button{
+            background: #28a745;
+            color: white;
+            border: none;
+            font-size: 18px;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor:pointer;
+            transition: 0.3s;
+        }
+        .cta-button:hover{
+            background:#218838;
+        }
+        @media(max-width:768px){
+            .hero{
+                height:90vh;
+                padding: 20px;
+            }
+            .overlay{
+                width:90%;
+            }
+            nav{
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            nav ul{
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 100%;
+                flex-wrap: nowrap;
+            }
+            nav ul li{
+                margin: 0 6px ;
+            }
+        }
+        footer{
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 19px;
+            font-size: 14px;
+            width: 100%;
+            margin-top: auto;
+        }
+        footer a{
+            color:#28a745 ;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover{
+            text-decorator:underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">SmartCare | Your Trusted Healthcare Partner</div>
+        <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        <section class="hero">
+            <div class="overlay">
+                <h1>Access Quality Healthcare,Anytime.</h1>
+                <p>Your health is our priority. Book doctor appointments, manage medical records, and recive healthcare support- all in one place for you.</p>
+                <button class="cta-button">Book an appointment</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 SmartCare. All rights reserved.</p>
+            <p>Email: <a href="mailto:support@smartcare.com">support@smartcare.com</a></p>
+            <p>Location:123 Health st,Hyderabad,Country</p>
+            <p>Contact:91+ 93849 00000</p>
+        </div>
+    </footer>    
+</body>
+</html>
