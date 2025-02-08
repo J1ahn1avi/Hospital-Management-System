@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/images/icon.ico">
-    <title>Login page</title>
+    <title>Sign up </title>
     <style>
         *{
             margin:0;
@@ -19,34 +18,25 @@
             height: 100vh;
             background-color: #0d1f2a;
         }
-        .login-container{
+        .signup-container{
             background-color:white;
             padding: 30px;
             border-radius:10px;
             text-align: center;
             width: 350px;
         }
-        .login-container h2 {
-            margin-bottom: 15px;
-        }
-        .login-container p {
-            color: rgb(178, 179, 216);
-            font-size: 20px;
-            text-align: left;
-            margin-bottom: 20px;
-        }
-        .input-group{
+        .input{
             text-align:left;
             margin-bottom: 15px;
             color: #0f256d;
         }
-        .input-group input{
+        .input input{
             width: 100%;
             padding: 10px;
             border: 1px solid #18162f ;
             border-radius: 7px;
         }
-        .login-btn{
+        .signup-btn{
             width: 30%;
             padding: 10px;
             border-radius: 4px;
@@ -57,40 +47,47 @@
             border: none;
             font-size: 15px;
         }
-        .login-btn:hover{
+        .signup-btn:hover{
             background-color:rgb(22, 22, 81);
         }
-        .signup-link {
+        .login-link{
             margin-top: 10px;
             font-size: 17px;
         }
-        .signup-link a {
+        .login-link a{
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
         }
-        .signup-link a:hover {
+        .login-link a:hover{
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Welcome Back</h2>
-        <p>Login with your details.</p>
+    <div class="signup-container">
+        <h2>Create an Account</h2>
         <form action="#" method="POST">
-            <div class="input-group">
+            <div class="input">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Full name" required>
+            </div>
+            <div class="input">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
             </div>
-            <div class="input-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Password" required>
+            <div class="input">
+                <label for="password">Create password:</label>
+                <input type="password" id="password" name="password" placeholder=" Create Password" required>
             </div>
-            <button type="submit" class="login-btn">Login</button>
+            <div class="input">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="signup-btn">Sign Up</button>
         </form>
-        <div class="signup-link">
-            Don't have an account? <a href="./signup.html">Sign Up</a>
+        <div class="login-link">
+            Already have an account? <a href="./login.html">Login here</a>
         </div>
     </div>
 </body>
